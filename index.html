@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siligrow — Digital Growth</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+<header>
+  <nav>
+    <a class="logo" href="#"> <img src="./sligrow-logo.png" alt="Siligrow"></a>
+
+    <div class="links">
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <button class="nav-cta" onclick="document.querySelector('#contact').scrollIntoView()">Let's Talk →</button>
+
+    <button class="burger" aria-label="Open menu" onclick="toggleMenu(true)">
+      <i></i><i></i>
+    </button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-head">
+    <div class="mobile-logo">sili<span>grow</span></div>
+    <button class="close" aria-label="Close menu" onclick="toggleMenu(false)">×</button>
+  </div>
+
+  <div class="mobile-links">
+    <a href="#services" onclick="toggleMenu(false)">Services</a>
+    <a href="#contact" onclick="toggleMenu(false)">Contact</a>
+  </div>
+</div>
+
+<main>
+  <section class="hero" id="home">
+
+    <div class="shape-chain" aria-hidden="true">
+      <span class="chain-circle c1"></span>
+      <span class="chain-circle c2"></span>
+      <span class="chain-circle c3"></span>
+      <span class="chain-circle c4"></span>
+      <span class="chain-circle c5"></span>
+    </div>
+    <div class="hero-mobile-circle" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+
+      <div class="copy">
+        <div class="hero-tagline" aria-hidden="true">
+          <span class="hero-tagline-line"></span>
+          <span>Simple ideas<br>Real growth</span>
+        </div>
+
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Digital growth studio
+        </div>
+
+        <h1>
+          We make<br>
+          brands<br>
+          <span class="accent">impossible</span><br>
+          to ignore.
+        </h1>
+
+        <p class="intro">
+          We combine strategy, creativity and technology to help ambitious
+          businesses build a stronger digital presence and grow with purpose.
+        </p>
+
+        <div class="actions">
+          <a class="primary" href="#contact">
+            Let's Talk
+            <span class="arrow">↗</span>
+          </a>
+          <a class="secondary" href="#services">Explore services ↓</a>
+        </div>
+      </div>
+
+      <div class="visual-wrap">
+        <div class="visual">
+
+          <div class="visual-back"></div>
+
+          <div class="visual-card">
+            <div class="card-top">
+              <div class="mini-logo">Siligrow<span style="color:var(--teal)">.</span></div>
+              <div class="status"><b></b> GROWTH MODE</div>
+            </div>
+
+            <div class="chart">
+              <div class="chart-label">Digital momentum</div>
+              <div class="line"></div>
+              <div class="point"></div>
+            </div>
+
+            <div class="metric">
+              <div>
+                <small>BUILD · REACH · GROW</small>
+              </div>
+              <strong>∞</strong>
+            </div>
+          </div>
+
+          <div class="floating one">
+            <div class="float-number">01</div>
+            <div class="float-label">Strategy first</div>
+          </div>
+
+          <div class="floating two">
+            <div class="float-number">→</div>
+            <div class="float-label">Creative that converts</div>
+          </div>
+
+          <div class="lime-pill">✦</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-bottom">
+      <div class="pill-list">
+        <span class="pill">STRATEGY</span>
+        <span class="pill">CREATIVE</span>
+        <span class="pill">DIGITAL</span>
+        <span class="pill">PERFORMANCE</span>
+      </div>
+
+      <div class="scroll">
+        Scroll to explore
+        <span class="scroll-line"></span>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<!-- ================= SERVICES ================= -->
+
+
+<section class="services" id="services">
+  <div class="container">
+
+    <div class="heading">
+      <div>
+        <div class="eyebrow">
+          <span class="dot"></span>
+          What we do
+        </div>
+        <h2>Built to make<br>your brand <span style="color:var(--teal)">move.</span></h2>
+      </div>
+
+      <p>
+        From your first idea to your next stage of growth, we bring strategy,
+        creativity and digital execution together under one roof.
+      </p>
+    </div>
+
+    <!-- SERVICE SLIDES (phone) -->
+    <div class="mobile-deck">
+
+      <div class="swipe-label">
+        <span>Explore our services</span>
+      </div>
+
+      <div class="deck" id="deck">
+        <div class="deck-track" id="deckTrack"></div>
+      </div>
+
+      <div class="deck-counter" id="deckCounter"></div>
+
+      <div class="deck-controls">
+        <button class="deck-control" id="prevBtn" aria-label="Previous service">←</button>
+        <button class="deck-control" id="nextBtn" aria-label="Next service">→</button>
+      </div>
+
+    </div>
+
+    <!-- SERVICE GRID (laptop / desktop) -->
+    <div class="services-grid" id="servicesGrid"></div>
+
+    <div class="service-foot">
+      Strategy · Creative · Digital · Performance
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ================= CONTACT / CTA ================= -->
+<section class="contact" id="contact">
+  <div class="contact-bg1"></div>
+  <div class="contact-bg2"></div>
+
+  <div class="contact-wrap">
+    <div class="contact-heading contact-reveal">
+      <div>
+        <div class="contact-eyebrow"><i></i> Start something good</div>
+        <h1 class="contact-title">READY TO<br><span>GROW?</span></h1>
+      </div>
+      <p class="contact-intro">
+        Tell us what you're building, where you want to go, and what's getting in the way.
+        Send us your requirements and we'll take it from there.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info contact-reveal">
+        <div>
+          <h2>Let's talk.</h2>
+
+          <div class="contact-links">
+            <div class="contact-item">
+              <div class="contact-label">Phone</div>
+              <a href="tel:+91 7060 68209">+91 7060 68209</a>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Email</div>
+              <a href="mailto:siligrowteam@gmail.com">siligrowteam@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">WhatsApp</div>
+              <a href="https://wa.me/+917076068209" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="contact-label contact-follow-label">Follow Siligrow</div>
+          <div class="contact-socials">
+            <a href="https://www.instagram.com/siligrow.in/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/people/Siligrow/61593624945808/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://youtube.com/@siligrow26" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+
+        <a class="contact-chat"
+           href="https://wa.me/917076068209?text=Hi%20Siligrow%2C%20I%27d%20like%20to%20discuss%20a%20project."
+           target="_blank" rel="noopener">
+          Chat with us on WhatsApp <b>↗</b>
+        </a>
+      </div>
+
+      <div class="contact-form contact-reveal">
+        <h2>Tell us about your project.</h2>
+        <p class="contact-form-note">
+          Fill in a few details. We'll get back to you as soon as possible.
+        </p>
+
+        <form action="https://formsubmit.co/siligrowteam@gmail.com"
+              method="POST"
+              id="enquiryForm">
+          <input type="hidden" name="_subject" value="New Siligrow Website Enquiry">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://example.com/thank-you.html">
+
+          <div class="contact-row">
+            <div class="contact-field">
+              <label>NAME *</label>
+              <input name="name" required placeholder="Your name">
+            </div>
+            <div class="contact-field">
+              <label>EMAIL *</label>
+              <input type="email" name="email" required placeholder="you@example.com">
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-field">
+              <label>PHONE / WHATSAPP</label>
+              <input name="phone" placeholder="+91 ...">
+            </div>
+            <div class="contact-field">
+              <label>COMPANY</label>
+              <input name="company" placeholder="Company name">
+            </div>
+          </div>
+
+          <div class="contact-field">
+            <label>WHAT DO YOU NEED?</label>
+            <select name="service">
+              <option value="">Select a service</option>
+              <option>Social Media</option>
+              <option>Performance Marketing</option>
+              <option>SEO</option>
+              <option>Content & Creative</option>
+              <option>Web Development</option>
+              <option>Branding</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="contact-field">
+            <label>YOUR REQUIREMENTS *</label>
+            <textarea name="requirements" required
+              placeholder="Tell us about your goals, requirements, budget or anything else we should know..."></textarea>
+          </div>
+
+          <button class="contact-submit" type="submit">
+            Send enquiry <span>↗</span>
+          </button>
+
+          <p class="contact-note">Your enquiry will be sent directly to Siligrow's email & phone.</p>
+        </form>
+
+        <iframe
+          name="emailSubmitFrame"
+          style="display:none;">
+        </iframe>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Siligrow Footer ===== -->
+<footer class="sili-footer" id="footer">
+  <div class="sili-footer-wrap">
+    <div class="sili-footer-top">
+      <div class="sili-footer-brand">
+        <div class="sili-footer-logo"><img src="./sligrow-logo.png" alt="Siligrow"></div>
+        <p class="sili-footer-tagline">Strategy, creativity and technology for businesses ready to build a stronger digital presence.</p>
+      </div>
+
+      <div class="sili-footer-col">
+        <h3>Explore</h3>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="sili-footer-col">
+        <h3>Connect</h3>
+        <a href="mailto:siligrowteam@gmail.com">Email us</a>
+        <a href="https://www.instagram.com/siligrow.in/">Instagram</a>
+        <a href="https://www.facebook.com/people/Siligrow/61593624945808/">Facebook</a>
+      </div>
+    </div>
+
+    <div class="sili-footer-bottom">
+      <span>© 2026 Siligrow. All rights reserved.</span>
+      <span><i class="sili-footer-dot"></i>Digital growth studio · <a href="#">Privacy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
